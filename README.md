@@ -34,5 +34,5 @@ python scripts/run_knowledge.py --input-dir data/processed/sample_data
 
 ### Predicting entity knowledge values across dataset using GNN
 ```
-python scripts/run_gnn.py --input-dir data/processed/MyKG
+python scripts/run_gnn.py --input-dir data/processed/sample_data
 ```
