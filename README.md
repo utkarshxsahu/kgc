@@ -7,7 +7,7 @@ To setup the environment, dependencies can be installed using conda or pip:
 ## Data Setup
 
 <li> Dataset files are available at:<br>
-https://drive.google.com/drive/folders/1tj1rzJiXlbJtLMFpKWTMSuLmCtvHk5VL?usp=sharing/
+
 
 
 <li> Please download them and save them within the directory data/raw/
