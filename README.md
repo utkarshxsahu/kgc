@@ -25,7 +25,7 @@ python scripts/run_dataset.py --input-dir data/raw/sample_data --output-base dat
 
 ```
 ### Step 2: Query triplet prompts to LLM for True/False evaluation
-Open the src/my_project/query.py and in the input field enter the triplets csv file from step 1. Then run:
+Open the src/my_project/query.py and in the input field enter the triplets csv file processed from step 1. Save it and then run:
 ```
 python src/my_project/run_query.py 
 ```
