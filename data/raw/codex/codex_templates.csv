@@ -1,0 +1,72 @@
+rel,rel_label,prompt_template
+P36,capital,The capital of {subject} is {object}.
+P361,part of,{subject} is part of {object}.
+P159,headquarters location,The headquarters of {subject} is or was {object}.
+P17,country,{subject} is associated with the country {object}.
+P140,religion or worldview,The religion or worldview of {subject} is {object}.
+P69,educated at,{subject} was educated at {object}.
+P1412,"languages spoken, written or signed",{subject} communicates in {object}.
+P551,residence,{subject} resides or resided in {object}.
+P19,place of birth,{subject} was born in {object}.
+P451,unmarried partner,"{subject} has or had an unmarried partner, {object}."
+P136,genre,The genre of {subject} is {object}.
+P264,record label,The record label for {subject} is {object}.
+P740,location of formation,The location of formation for {subject} is {object}.
+P495,country of origin,The country of origin of {subject} is {object}.
+P161,cast member,"In {subject}, {object} is a cast member."
+P106,occupation,The occupation of {subject} is or was {object}.
+P172,ethnic group,{subject} belongs to the {object} ethnic group.
+P26,spouse,{subject} is or was married to {object}.
+P102,member of political party,{subject} is a member of the political party {object}.
+P138,named after,{subject} is named after {object}.
+P840,narrative location,The narrative location of {subject} is {object}.
+P131,located in the administrative territorial entity,The administrative territorial entity in which {subject} is located is {object}.
+P27,country of citizenship,{subject} is a citizen of {object}.
+P3373,sibling,{subject} is a sibling of {object}.
+P20,place of death,{subject} died in {object}.
+P749,parent organization,The parent organization of {subject} is {object}.
+P170,creator,{subject} was created by {object}.
+P407,language of work or name,The language of work or the name for {subject} is {object}.
+P108,employer,{subject} is employed by {object}.
+P119,place of burial,{subject} is buried at {object}.
+P47,shares border with,{subject} shares a border with {object}.
+P530,diplomatic relation,{subject} has a diplomatic relation with {object}.
+P463,member of,{subject} is a member of {object}.
+P737,influenced by,{subject} was influenced by {object}.
+P37,official language,The official language of {subject} is {object}.
+P57,director,The director of {subject} is {object}.
+P1056,product or material produced,{subject} produces {object}.
+P30,continent,The continent of {subject} is {object}.
+P800,notable work,{subject} is known for the work {object}.
+P488,chairperson,The chairperson of {subject} is {object}.
+P101,field of work,The field of work of {subject} is {object}.
+P112,founded by,{subject} was founded by {object}.
+P452,industry,The industry associated with {subject} is {object}.
+P1303,instrument,{subject} uses the instrument {object}.
+P40,child,The child of {subject} is {object}.
+P2578,is the study of,{subject} is the study of {object}.
+P135,movement,The movement associated with {subject} is {object}.
+P641,sport,The sport associated with {subject} is {object}.
+P366,has use,The use of {subject} is {object}.
+P3095,practiced by,{subject} is practiced by {object}.
+P35,head of state,The head of state of {subject} is or was {object}.
+P54,member of sports team,{subject} is a member of the sports team {object}.
+P169,chief executive officer,The chief executive officer of {subject} is {object}.
+P457,foundational text,The foundational text of {subject} is {object}.
+P2348,time period,The time period of {subject} is {object}.
+P780,symptoms,The symptoms of {subject} include {object}.
+P1995,health specialty,{subject} is managed by the {object} specialty.
+P50,author,{subject} was authored by {object}.
+P84,architect,The architect of {subject} is {object}.
+P4552,mountain range,{subject} is located in the {object} mountain range.
+P114,airline alliance,{subject} is a member of the {object} airline alliance.
+P1050,medical condition,{subject} suffers from {object}.
+P2176,drug used for treatment,{object} is used to treat {subject}.
+P123,publisher,{subject} was published by {object}.
+P194,legislative body,The legislative body of {subject} is the {object}.
+P509,cause of death,{subject} died of {object}.
+P466,occupant,The occupant of {subject} is {object}.
+P113,airline hub,{subject} uses {object} as its hub.
+P2283,uses,{subject} uses {object}.
+P149,architectural style,{subject} is designed in the {object} style.
+P1454,legal form,The legal form of {subject} is a {object}.

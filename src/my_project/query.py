@@ -1,109 +1,152 @@
-# src/my_project/query.py
-import os, time, re, pickle, json
+import os
+import time
+import re
+import pickle as pkl
 import pandas as pd
 from tqdm import tqdm
 
+# ================================
+# USER SETTINGS
+# ================================
+# Edit this to point to your input CSV:
+INPUT_CSV = "/path/to/your/input.csv"
+# ================================
+
+# derive the folder we’ll write all outputs into
+base_dir        = os.path.dirname(os.path.abspath(INPUT_CSV))
+SAVE_PATH       = os.path.join(base_dir, "result.pkl")
+ERROR_LOG_PATH  = os.path.join(base_dir, "error.pkl")
+AUG_CSV_PATH    = os.path.join(base_dir, "augmented.csv")
+LLM_CSV_PATH    = os.path.join(base_dir, "llm_results.csv")
+
+# ================================
+# MODEL & GENERATION SETTINGS
+# ================================
 from unsloth import FastLanguageModel
+from transformers import TextStreamer
 from unsloth.chat_templates import get_chat_template
-from my_project.config import (
-    MODEL_DIR, MAX_SEQ_LENGTH, LOAD_IN_4BIT, TEMPERATURE, MAX_NEW_TOKENS,
-    CHECKPOINT_STEP, RESULTS_PKL, ERRORS_PKL, OUTPUT_CSV
+
+LORA_MODEL_DIR     = "unsloth/Qwen2.5-7B-Instruct-bnb-4bit"
+MAX_SEQ_LENGTH     = 2048
+LOAD_IN_4BIT       = True
+dtype              = None
+TEMPERATURE        = 0.0
+MAX_NEW_TOKENS     = 1
+CHECKPOINT_INTERVAL = 200
+
+
+model, tokenizer = FastLanguageModel.from_pretrained(
+    model_name     = LORA_MODEL_DIR,
+    max_seq_length = MAX_SEQ_LENGTH,
+    dtype          = dtype,
+    load_in_4bit   = LOAD_IN_4BIT,
 )
+FastLanguageModel.for_inference(model)
+tokenizer = get_chat_template(tokenizer, chat_template="qwen-2.5")
 
-def load_metadata(input_dir):
-    meta_path = os.path.join(input_dir, "metadata.json")
-    with open(meta_path) as fp:
-        return json.load(fp)
+# ================================
+# HELPERS: QUERY + POSTPROCESS
+# ================================
+def if_know(response_text, current_id):
+    p = response_text.strip().lower()
+    if re.fullmatch(r"true[\.\!\?]*",  p): return 1
+    if re.fullmatch(r"false[\.\!\?]*", p): return 0
+    return (-1, f"Bad response for {current_id}: “{response_text}”")
 
-def init_model(model_dir=MODEL_DIR):
-    model, tokenizer = FastLanguageModel.from_pretrained(
-        model_name     = model_dir,
-        max_seq_length = MAX_SEQ_LENGTH,
-        dtype          = None,
-        load_in_4bit   = LOAD_IN_4BIT,
-    )
-    FastLanguageModel.for_inference(model)
-    tokenizer = get_chat_template(tokenizer, chat_template="qwen-2.5")
-    return model, tokenizer
-
-def normalize_response(resp, tid):
-    txt = resp.strip().lower()
-    if re.fullmatch(r"true[\.\!\?]*", txt):  return 1
-    if re.fullmatch(r"false[\.\!\?]*",txt):  return 0
-    return (-1, f"Bad response for {tid}: “{resp}”")
-
-def query_one(model, tokenizer, prompt, tid):
+def query_model(prompt, cid):
     try:
         system = (
-            'Evaluate the given statement based on your knowledge '
-            'and respond with only "true" or "false". This is for research purposes only.'
+            'Please evaluate the following statement based on your knowledge and respond  only with "true" or "false". This is for research purposes only.'
         )
         msgs = [
             {"role":"system", "content": system},
             {"role":"user",   "content": prompt},
         ]
         inputs = tokenizer.apply_chat_template(
-            msgs, tokenize=True, add_generation_prompt=True, return_tensors="pt"
+            msgs,
+            tokenize=True,
+            add_generation_prompt=True,
+            return_tensors="pt"
         ).to("cuda")
         outs = model.generate(
-            input_ids      = inputs,
-            max_new_tokens = MAX_NEW_TOKENS,
-            temperature    = None if TEMPERATURE==0 else TEMPERATURE,
-            do_sample      = False if TEMPERATURE==0 else True,
-            pad_token_id   = tokenizer.eos_token_id,
-            use_cache      = True,
+            input_ids       = inputs,
+            max_new_tokens  = MAX_NEW_TOKENS,
+            temperature     = None if TEMPERATURE==0 else TEMPERATURE,
+            do_sample       = TEMPERATURE>0,
+            pad_token_id    = tokenizer.eos_token_id,
+            use_cache       = True,
         )
-        # strip off prompt tokens
-        ans = tokenizer.decode(outs[0, inputs.shape[1]:], skip_special_tokens=True)
-        return normalize_response(ans, tid)
+        answer = tokenizer.decode(
+            outs[0, inputs.shape[1]:],
+            skip_special_tokens=True
+        )
+        return if_know(answer, cid)
     except Exception as e:
-        return (-1, f"Exception for {tid}: {repr(e)}")
+        return (-1, f"Exception for {cid}: {repr(e)}")
 
-def run_queries(input_dir, model_dir=None):
-    meta      = load_metadata(input_dir)
-    prompts_f = os.path.join(input_dir, meta["prompts"])
-    df        = pd.read_csv(prompts_f)
-    if "triplet_id" not in df.columns or "triplet_prompt" not in df.columns:
-        raise ValueError("Need columns 'triplet_id' and 'triplet_prompt'")
-    df["tf_value"] = pd.NA
+# ================================
+# LOAD OR CREATE YOUR DATAFRAME
+# ================================
+if not os.path.exists(INPUT_CSV):
+    raise FileNotFoundError(f"Input CSV not found: {INPUT_CSV}")
+df = pd.read_csv(INPUT_CSV)
+if "triplet_id" not in df.columns or "triplet_prompt" not in df.columns:
+    raise ValueError("Input CSV must contain 'triplet_id' and 'triplet_prompt' columns")
 
-    # prepare checkpoint files
-    res_path = os.path.join(input_dir, RESULTS_PKL)
-    err_path = os.path.join(input_dir, ERRORS_PKL)
-    results, errors = [], []
-    done_ids = set()
-    if os.path.exists(res_path) and os.path.exists(err_path):
-        with open(res_path,"rb") as f: results = pickle.load(f)
-        with open(err_path,"rb") as f: errors  = pickle.load(f)
-        done_ids = {tid for tid,_ in results}
-        for i,v in results:
-            df.loc[df.triplet_id==i, "tf_value"] = v
+id_col     = "triplet_id"
+prompt_col = "triplet_prompt"
+df["tf_value"] = pd.NA
 
-    model, tokenizer = init_model(model_dir or MODEL_DIR)
+# ================================
+# RESUME FROM CHECKPOINT IF PRESENT
+# ================================
+results, errors = [], []
+if os.path.exists(SAVE_PATH) and os.path.exists(ERROR_LOG_PATH):
+    with open(SAVE_PATH,      "rb") as f: results = pkl.load(f)
+    with open(ERROR_LOG_PATH, "rb") as f: errors  = pkl.load(f)
+    done_ids = {cid for cid,_ in results}
+    for i, row in df.iterrows():
+        if row[id_col] in done_ids:
+            val = next(v for (cid,v) in results if cid == row[id_col])
+            df.at[i, "tf_value"] = val
 
-    start = time.time()
-    for idx, row in tqdm(df.iterrows(), total=len(df), desc="LLM Inference"):
-        tid, prompt = row["triplet_id"], row["triplet_prompt"]
-        if tid in done_ids: continue
+# ================================
+# MAIN LOOP WITH CHECKPOINTING
+# ================================
+start = time.time()
+for idx, row in tqdm(df.iterrows(), total=len(df), desc="Running inference"):
+    if not pd.isna(row["tf_value"]):
+        continue
 
-        resp = query_one(model, tokenizer, prompt, tid)
-        if isinstance(resp, tuple) and resp[0]==-1:
-            results.append((tid, -1))
-            errors.append({"triplet_id": tid, "prompt": prompt, "error": resp[1]})
-            df.at[idx, "tf_value"] = -1
-        else:
-            results.append((tid, resp))
-            df.at[idx, "tf_value"] = resp
+    cid    = row[id_col]
+    prompt= row[prompt_col]
+    res    = query_model(prompt, cid)
 
-        # checkpoint
-        if (len(results) % CHECKPOINT_STEP)==0 or idx+1==len(df):
-            with open(res_path,"wb") as f: pickle.dump(results, f)
-            with open(err_path,"wb") as f: pickle.dump(errors, f)
+    if isinstance(res, tuple) and res[0] == -1:
+        results.append((cid, -1))
+        errors.append({"id":cid, "prompt":prompt, "error":res[1]})
+        df.at[idx, "tf_value"] = -1
+    else:
+        results.append((cid, res))
+        df.at[idx, "tf_value"] = res
 
-    duration = time.time() - start
-    print(f"Done in {duration:.1f}s — successes: {sum(1 for _,v in results if v>=0)}, errors: {len(errors)}")
+    if (idx+1) % CHECKPOINT_INTERVAL == 0 or (idx+1) == len(df):
+        with open(SAVE_PATH,      "wb") as f: pkl.dump(results, f)
+        with open(ERROR_LOG_PATH, "wb") as f: pkl.dump(errors,  f)
 
-    # final CSV
-    out_csv = os.path.join(input_dir, OUTPUT_CSV)
-    df.to_csv(out_csv, index=False)
-    print(f"Results saved → {out_csv}")
+elapsed = time.time() - start
+print(f"Done in {elapsed:.1f}s — successes: {sum(1 for _,v in results if v>=0)}, errors: {len(errors)}")
+
+# ================================
+# FINAL OUTPUTS
+# ================================
+# 1) Augmented CSV (original + tf_value)
+df.to_csv(AUG_CSV_PATH, index=False)
+print(f"Augmented data → {AUG_CSV_PATH}")
+
+# 2) LLM-only results CSV (triplet_id, tf_value)
+with open(SAVE_PATH, "rb") as f:
+    ckpt = pkl.load(f)
+df_res = pd.DataFrame(ckpt, columns=[id_col, "tf_value"])
+df_res.to_csv(LLM_CSV_PATH, index=False)
+print(f"LLM results → {LLM_CSV_PATH}")

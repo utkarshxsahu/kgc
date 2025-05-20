@@ -1,9 +1,9 @@
 # Step 1: Defaults
 REQUIRED_HEADERS = {
-    'triplet_id': ['triplet_id', 'id', 'tid'],
-    'sub_label' : ['subject', 'sub_label', 'subject_label'],
-    'rel_label' : ['relation', 'rel_label', 'predicate'],
-    'obj_label' : ['object', 'obj_label', 'object_label'],
+    'triplet_id': ['triplet_id', 'id', 'tid', 'triple_id'],
+    'sub_label' : ['subject', 'sub_label', 'subject_label','sub'],
+    'rel_label' : ['relation', 'rel_label', 'predicate', 'rel'],
+    'obj_label' : ['object', 'obj_label', 'object_label', 'obj'],
 }
 T_QUERY      = 2000
 Q4_CAP       = 40

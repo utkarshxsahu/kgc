@@ -1,0 +1,29 @@
+rel_label,prompt_template
+A,"The chemical {subject} exhibits agonistic, activating, or antagonistic effects on the gene {object}."
+B,{subject} binds with the gene {object} as a ligand.
+E,{subject} affects the expression or production of the gene {object}.
+N,The chemical {subject} inhibits the gene {object}.
+O,The gene {subject} participates in transport or channeling functions related to the chemical {object}.
+K,The gene {subject} is involved in the metabolism or pharmacokinetic processing of the chemical {object}.
+Z,The gene {subject} influences enzyme activity affecting the chemical {object}.
+T,The chemical {subject} is used for the treatment or therapy of the disease {object}.
+Sa,The chemical {subject} may cause side effects or adverse events in relation to the disease {object}.
+C,The chemical {subject} inhibits cell growth associated with the disease {object}.
+J,The chemical {subject} plays a role in the pathogenesis of the disease {object}.
+Pr,"The chemical {subject} prevents, suppresses, or alleviates the severity of the disease {object}."
+Mp,The disease {subject} is characterized by progression biomarkers linked to the chemical {object}.
+P,The gene {subject} contributes to the pathogenesis or promotes the progression of the disease {object}.
+Te,The gene {subject} shows potential therapeutic effects on the disease {object}.
+U,Mutations or polymorphisms in the gene {subject} alter the risk associated with the disease {object}.
+D,The gene {subject} may exert a therapeutic effect on the disease {object}.
+ML,The disease {subject} is linked to diagnostic biomarkers or regulatory mechanisms involving the gene {object}.
+X,The disease {subject} may have a therapeutic connection with the gene {object}.
+Rg,The gene {subject} is involved in regulatory pathways together with the gene {object}.
+Ra,The gene {subject} enhances the response or activates/stimulates the gene {object}.
+Q,The gene {subject} is linked to the production by cell populations of the gene {object}.
+GG,The gene {subject} has a direct relationship with the gene {object}.
+CC,The chemical {subject} is related to the chemical {object}.
+An,The disease {subject} is an ancestor of the disease {object}.
+As,The disease {subject} is associated with the disease {object}.
+I,The {subject} interacts with {object} in a pharmacological or biomedical context.
+Iw,{subject} is associated with {object}.

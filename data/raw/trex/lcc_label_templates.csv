@@ -1,0 +1,424 @@
+﻿predicate_uri,rel_label,prompt_template
+P425,field of this occupation,{subject} works in the field of {object}.
+P38,currency,The currency of {subject} is {object}.
+P832,public holiday,The public holiday in {subject} is {object}.
+P78,top-level Internet domain,The top-level internet domain of {subject} is {object}.
+P2579,studied in,{subject} is studied in {object}.
+P282,writing system,The writing system of {subject} is {object}.
+P2746,production statistics,Production statistics of {subject} are about {object}.
+P2989,has grammatical case,{subject} has grammatical case {object}.
+P1304,central bank,The central bank of {subject} is {object}.
+P3679,stock market index,{subject} stock market index is {object}.
+P417,patron saint,The patron saint of {subject} is {object}.
+P210,party chief representative,The party chief representative of {subject} is {object}.
+P92,main regulatory text,The main regulatory text of {subject} is {object}.
+P1018,language regulatory body,The language regulatory body for {subject} is {object}.
+P1478,has immediate cause,The immediate cause of {subject} is {object}.
+P942,theme music,The theme music of {subject} is {object}.
+P414,stock exchange,The stock exchange for {subject} is {object}.
+P1336,territory claimed by,{subject} is a territory claimed by {object}.
+P3103,has tense,{subject} has tense {object}.
+P974,tributary,A tributary of {subject} is {object}.
+P403,mouth of the watercourse,The mouth of the watercourse of {subject} is {object}.
+P2283,uses,{subject} uses {object}.
+P134,dialect of,{object} is a dialect of {subject}.
+P469,lake on watercourse,{object} is a lake on watercourse of {subject}.
+P2578,is the study of,{subject} is the study of {object}.
+P398,child astronomical body,The child astronomical body of {subject} is {object}.
+P397,parent astronomical body,{subject} is a parent astronomical body of {object}.
+P2505,carries,{subject} carries {object}.
+P543,oath made by,The oath of {subject} was made by {object}.
+P1049,worshipped by,{subject} is worshipped by {object}.
+P1080,from narrative universe,{subject} is from the narrative universe of {object}.
+P376,located on astronomical body,{subject} is located on astronomical body {object}.
+P178,developer,{subject} is developed by {object}.
+P306,operating system,The operating system of {subject} is {object}.
+P770,cause of destruction,The cause of destruction of {subject} is {object}.
+P121,item operated,{subject} operated {object}.
+P868,foods traditionally associated,A food traditionally associated with {subject} is {object}.
+P501,enclave within,{subject} is an enclave within {object}.
+P199,organizational divisions,A organizational division of {subject} is {object}.
+P1454,legal form,The legal form of {subject} is {object}.
+P358,discography,The discography of {subject} is {object}.
+P790,approved by,{subject} was approved by {object}.
+P647,drafted by,{subject} was drafted by {object}.
+P3461,designated as terrorist by,{subject} is designated as terrorist by {object}.
+P1479,has contributing factor,A contributing factor of {subject} is {object}.
+P277,programmed in,{subject} is programmed in {object}.
+P1056,"product, material, or service produced or provided",{subject} produces {object}.
+P708,diocese,The diocese of {subject} is {object}.
+P545,torch lit by,The torch of {subject} was lit by {object}.
+P522,type of orbit,The type of orbit of {subject} is {object}.
+P201,outflows,The outflow of {subject} is {object}.
+P200,inflows,The inflow of {subject} is {object}.
+P2098,substitute/deputy/replacement of office/officeholder,The substitute for {subject} is {object}.
+P186,made from material,{subject} is made from material {object}.
+P157,killed by,{subject} was killed by {object}.
+P2512,has spin-off,The spin-off of {subject} is {object}.
+P880,CPU,The CPU of {subject} is {object}.
+P831,parent club,The parent club of {subject} is {object}.
+P2500,league level below,The league level below {subject} is {object}.
+P364,original language of film or TV show,The original language of {subject} is {object}.
+P629,edition or translation of,{subject} is an edition or translation of {object}.
+P2596,culture,The culture of {subject} is {object}.
+P87,librettist,The librettist of {subject} is {object}.
+P747,has edition or translation,An edition or translation of {subject} is {object}.
+P411,canonization status,The canonization status of {subject} is {object}.
+P3161,has grammatical mood,The grammatical mood of {subject} is {object}.
+P2828,corporate officer,The corporate officer of {subject} is {object}.
+P1075,rector,The rector of {subject} is {object}.
+P2365,cognomen,The cognomen of {subject} is {object}.
+P703,found in taxon,The taxon where {subject} is found is {object}.
+P3091,mount,The mount of {subject} is {object}.
+P1068,instruction set,The instruction set of {subject} is {object}.
+P171,parent taxon,The parent taxon of {subject} is {object}.
+P944,code of nomenclature,The code of nomenclature for {subject} is {object}.
+P400,platform,The platform for {subject} is {object}.
+P2700,protocol,The protocol for {subject} is {object}.
+P841,feast day,The feast day of {subject} is {object}.
+P197,adjacent station,An adjacent station to {subject} is {object}.
+P122,basic form of government,The basic form of government of {subject} is {object}.
+P2499,league level above,The league level above {subject} is {object}.
+P634,team captain,The team captain of {subject} is {object}.
+P562,central bank/issuer,The central bank/issuer of {subject} is {object}.
+P179,part of the series,{subject} is part of {object}.
+P1434,takes place in fictional universe,{subject} takes place in the fictional universe of {object}.
+P1414,GUI toolkit or framework,The GUI toolkit or framework of {subject} is {object}.
+P275,copyright license,The copyright license of {subject} is {object}.
+P1462,standards body,The standards body for {subject} is {object}.
+P3033,package management system,The package management system for {subject} is {object}.
+P110,illustrator,The illustrator of {subject} is {object}.
+P1072,readable file format,The readable file format for {subject} is {object}.
+P2439,language used,The language used in {subject} is {object}.
+P1582,natural product of taxon,{subject} is a natural product of {object}.
+P1672,this taxon is source of,{subject} is the source of {object}.
+P105,taxon rank,The taxon rank of {subject} is {object}.
+P750,distributed by,{subject} is distributed by {object}.
+P2597,Gram staining,The Gram staining of {subject} is {object}.
+P1923,participating team,A participating team in {subject} is {object}.
+P3279,statistical leader,The statistical leader in {subject} is {object}.
+P1995,health specialty,The health specialty of {subject} is {object}.
+P2176,drug or therapy used for treatment,The drug or therapy used for treating {subject} is {object}.
+P618,source of energy,The source of energy for {subject} is {object}.
+P1382,partially coincident with,{subject} is partially coincident with {object}.
+P631,structural engineer,The structural engineer of {subject} is {object}.
+P2546,sidekick of,{subject} is the sidekick of {object}.
+P521,scheduled service destination,The scheduled service destination of {subject} is {object}.
+P609,terminus location,The terminus location of {subject} is {object}.
+P2291,charted in,{subject} is charted in {object}.
+P3349,designed to carry,{subject} is designed to carry {object}.
+P872,printed by,{subject} was printed by {object}.
+P612,mother house,The mother house of {subject} is {object}.
+P1809,choreographer,The choreographer of {subject} is {object}.
+P2821,by-product,A by-product of {subject} is {object}.
+P437,distribution format,The distribution format of {subject} is {object}.
+P479,input device,The input device for {subject} is {object}.
+P642,of,The {subject} is of {object}.
+P3300,musical conductor,The musical conductor of {subject} is {object}.
+P3450,sports season of league or competition,The sports season of {subject} is {object}.
+P1537,contributing factor of,A contributing factor of {subject} is {object}.
+P2813,house publication,The house publication of {subject} is {object}.
+P1264,valid in period,The valid period of {subject} is {object}.
+P541,office contested,The office contested in {subject} is {object}.
+P1536,immediate cause of,The immediate cause of {subject} is {object}.
+P870,instrumentation,The instrumentation of {subject} is {object}.
+P769,significant drug interaction,{subject} has a significant drug interaction with {object}.
+P2175,medical condition treated,The medical condition treated by {subject} is {object}.
+P129,physically interacts with,{subject} physically interacts with {object}.
+P2366,agnomen,The agnomen of {subject} is {object}.
+P655,translator,The translator of {subject} is {object}.
+P113,airline hub,The airline hub for {subject} is {object}.
+P3018,located in protected area,{subject} is located in the protected area {object}.
+P2789,connects with,{subject} connects with {object}.
+P3262,has anatomical branch,An anatomical branch of {subject} is {object}.
+P114,airline alliance,The airline alliance of {subject} is {object}.
+P927,anatomical location,The anatomical location of {subject} is {object}.
+P2286,arterial supply,The arterial supply of {subject} is {object}.
+P1557,manifestation of,A manifestation of {subject} is {object}.
+P689,afflicts,{subject} afflicts {object}.
+P1192,connecting service,The connecting service for {subject} is {object}.
+P81,connecting line,The connecting line of {subject} is {object}.
+P681,cell component,The cell component of {subject} is {object}.
+P408,software engine,The software engine of {subject} is {object}.
+P1547,depends on software,{subject} depends on the software {object}.
+P1363,points/goal scored by,The points/goal scored by {subject} is {object}.
+P3716,social classification,The social classification of {subject} is {object}.
+P3137,parent peak,The parent peak of {subject} is {object}.
+P2079,fabrication method,The fabrication method of {subject} is {object}.
+P1789,chief operating officer,The chief operating officer of {subject} is {object}.
+P1962,patron,The patron of {subject} is {object}.
+P1605,has natural reservoir,The natural reservoir of {subject} is {object}.
+P2058,depositary,The depositary of {subject} is {object}.
+P625,coordinate location,The coordinate location of {subject} is {object}.
+P3113,does not have part,{subject} does not have {object}.
+P2152,antiparticle,The antiparticle of {subject} is {object}.
+P2822,by-product of,{subject} is a by-product of {object}.
+P923,medical examination,The medical examination for {subject} is {object}.
+P658,tracklist,A track from the tracklist of {subject} is {object}.
+P2155,solid solution series with,{subject} is in a solid solution series with {object}.
+P1885,cathedral,The cathedral of {subject} is {object}.
+P141,IUCN conservation status,The IUCN conservation status of {subject} is {object}.
+P969,street address,The street address of {subject} is {object}.
+P913,notation,The notation for {subject} is {object}.
+P196,minor planet group,The minor planet group of {subject} is {object}.
+P744,asteroid family,The asteroid family of {subject} is {object}.
+P720,asteroid spectral type,The asteroid spectral type of {subject} is {object}.
+P97,noble title,The noble title of {subject} is {object}.
+P833,interchange station,The interchange station of {subject} is {object}.
+P767,contributor to the creative work or subject,{subject} has contributor {object}.
+P822,mascot,The mascot of {subject} is {object}.
+P518,applies to part,{subject} applies to {object}.
+P1398,structure replaces,{subject} replaces {object}.
+P3261,anatomical branch of,{subject} is an anatomical branch of {object}.
+P523,temporal range start,The temporal range start of {subject} is {object}.
+P427,taxonomic type,The taxonomic type of {subject} is {object}.
+P1880,measurement scale,The measurement scale for {subject} is {object}.
+P780,symptoms and signs,The symptoms and signs of {subject} include {object}.
+P59,constellation,The constellation of {subject} is {object}.
+P3174,art director,The art director of {subject} is {object}.
+P2445,metasubclass of,{subject} is a metasubclass of {object}.
+P1716,brand,The brand of {subject} is {object}.
+P3815,volcano observatory,The volcano observatory of {subject} is {object}.
+P516,powered by,{subject} is powered by {object}.
+P1445,fictional universe described in,{subject} is a fictional universe described in {object}.
+P1321,geographic affiliation of a swiss national,The geographic affiliation of {subject} is {object}.
+P167,structure replaced by,{subject} is replaced by {object}.
+P1652,referee,The referee of {subject} is {object}.
+P3764,pole position,The pole position in {subject} is {object}.
+P2414,substrate of,{object} is produced from {subject}.
+P2849,produced by,{subject} is produced by {object}.
+P106,occupation,The occupation of {subject} is {object}.
+P101,field of work,The field of work of {subject} is {object}.
+P463,member of,{subject} is a member of {object}.
+P551,residence,{subject} resides in {object}.
+P937,work location,{subject} works in {object}.
+P22,father,The father of {subject} is {object}.
+P108,employer,{subject} is employed by {object}.
+P802,student,{subject} is a student of {object}.
+P40,child,The child of {subject} is {object}.
+P19,place of birth,{subject} was born in {object}.
+P69,educated at,{subject} was educated at {object}.
+P3373,sibling,{subject} is a sibling of {object}.
+P1412,"languages spoken, written or signed",{subject} communicates in {object}.
+P119,place of burial,{subject} is buried at {object}.
+P20,place of death,{subject} died in {object}.
+P17,country,{subject}'s country is {object}.
+P131,located in the administrative territorial entity,The administrative territorial entity in which {subject} is located is {object}.
+P31,instance of,{subject} is an instance of {object}.
+P150,contains the administrative territorial entity,{subject} contains the administrative territorial entity {object}.
+P47,shares border with,{subject} shares a border with {object}.
+P530,diplomatic relation,{subject} has a diplomatic relation with {object}.
+P36,capital,The capital of {subject} is {object}.
+P30,continent,The continent of {subject} is {object}.
+P194,legislative body,The legislative body of {subject} is {object}.
+P793,significant event,A significant event in the life of {subject} was {object}.
+P37,official language,The official language of {subject} is {object}.
+P2184,history of topic,The history of {subject} is {object}.
+P1313,office held by head of government,The office held by the head of government of {subject} is {object}.
+P1365,replaces,{subject} replaces {object}.
+P35,head of state,The head of state of {subject} is {object}.
+P610,highest point,The highest point of {subject} is {object}.
+P1906,office held by head of state,The office held by the head of state of {subject} is {object}.
+P206,located in or next to body of water,{subject} is located in or next to {object}.
+P85,anthem,The anthem of {subject} is {object}.
+P163,flag,The flag of {subject} is {object}.
+P138,named after,{subject} is named after {object}.
+P6,head of government,The head of government of {subject} is {object}.
+P190,twinned administrative body,The twinned administrative body of {subject} is {object}.
+P1376,capital of,{subject} is the capital of {object}.
+P361,part of,{subject} is part of {object}.
+P1589,lowest point,The lowest point of {subject} is {object}.
+P1366,replaced by,{subject} was replaced by {object}.
+P156,followed by,{subject} is followed by {object}.
+P155,follows,{subject} follows {object}.
+P61,discoverer or inventor,The discoverer or inventor of {subject} is {object}.
+P112,founded by,{subject} was founded by {object}.
+P208,executive body,The executive body of {subject} is {object}.
+P209,highest judicial authority,The highest judicial authority of {subject} is {object}.
+P27,country of citizenship,{subject} is a citizen of {object}.
+P1303,instrument,{subject} uses the instrument {object}.
+P800,notable work,{subject} is known for the work {object}.
+P1066,student of,{subject} is a student of {object}.
+P509,cause of death,The cause of death for {subject} was {object}.
+P2341,indigenous to,{subject} is indigenous to {object}.
+P279,subclass of,{subject} is a subclass of {object}.
+P2633,geography of topic,The geography of {subject} is {object}.
+P457,foundational text,The foundational text of {subject} is {object}.
+P166,award received,{subject} received the award {object}.
+P1001,applies to jurisdiction,The jurisdiction applicable to {subject} is {object}.
+P527,has part(s),{subject} includes {object} as a part.
+P2388,position held by head of the organization,The office held by the head of {subject} is {object}.
+P488,chairperson,The chairperson of {subject} is {object}.
+P159,headquarters location,The headquarters of {subject} is {object}.
+P53,family,{subject} belongs to the family {object}.
+P706,located in/on physical feature,{subject} is located in or on the physical feature {object}.
+P2238,official symbol,The official symbol of {subject} is {object}.
+P418,"has seal, badge, or sigil","{subject} has the seal, badge, or sigil {object}."
+P237,coat of arms,The coat of arms of {subject} is {object}.
+P710,participant,"In {subject}, {object} participated."
+P276,location,The location of {subject} is {object}.
+P828,has cause,The cause of {subject} is {object}.
+P1542,has effect,The effect of {subject} is {object}.
+P1532,country for sport,The country for sport of {subject} is {object}.
+P641,sport,The sport associated with {subject} is {object}.
+P115,home venue,The home venue of {subject} is {object}.
+P118,league or competition,{subject} is associated with the league {object}.
+P127,owned by,{subject} is owned by {object}.
+P1344,participant in,{subject} participated in {object}.
+P286,head coach,The head coach of {subject} is {object}.
+P1889,different from,{subject} is different from {object}.
+P749,parent organization,The parent organization of {subject} is {object}.
+P355,has subsidiary,{subject} has the subsidiary {object}.
+P495,country of origin,The country of origin of {subject} is {object}.
+P140,religion or worldview,The religion or worldview of {subject} is {object}.
+P1383,contains settlement,{subject} contains the settlement {object}.
+P172,ethnic group,{subject} belongs to the {object} ethnic group.
+P103,native language,The native language of {subject} is {object}.
+P25,mother,The mother of {subject} is {object}.
+P737,influenced by,{subject} was influenced by {object}.
+P807,separated from,{subject} is separated from {object}.
+P421,located in time zone,{subject} is located in the time zone {object}.
+P460,said to be the same as,{subject} is said to be the same as {object}.
+P485,archives at,The archives of {subject} are located at {object}.
+P1142,political ideology,The political ideology of {subject} is {object}.
+P205,basin country,The basin country of {subject} is {object}.
+P1269,facet of,{subject} is a facet of {object}.
+P1546,motto,The motto of {subject} is {object}.
+P611,religious order,The religious order of {subject} is {object}.
+P542,officially opened by,{subject} was officially opened by {object}.
+P39,position held,{subject} held the position of {object}.
+P102,member of political party,{subject} is a member of the political party {object}.
+P26,spouse,{subject} is married to {object}.
+P1308,position holder,The officeholder of {subject} is {object}.
+P748,appointed by,{subject} was appointed by {object}.
+P263,official residence,The official residence of {subject} is {object}.
+P451,unmarried partner,"{subject} has an unmarried partner, {object}."
+P2959,permanent duplicated item,The permanent duplicated item associated with {subject} is {object}.
+P2389,organization directed by the office or position,The organization directed by {subject} is {object}.
+P137,operator,The operator of {subject} is {object}.
+P607,conflict,{subject} was involved in the {object}.
+P945,allegiance,The allegiance of {subject} is {object}.
+P466,occupant,The occupant of {subject} is {object}.
+P2936,language used,The language used in {subject} is {object}.
+P84,architect,The architect of {subject} is {object}.
+P461,opposite of,{subject} is the opposite of {object}.
+P1830,owner of,{subject} is the owner of {object}.
+P169,chief executive officer,The chief executive officer of {subject} is {object}.
+P54,member of sports team,{subject} is a member of the sports team {object}.
+P740,location of formation,The location of formation for {subject} is {object}.
+P162,producer,The producer of {subject} is {object}.
+P1037,director / manager,The director/manager of {subject} is {object}.
+P264,record label,The record label for {subject} is {object}.
+P3828,wears,{subject} wears {object}.
+P1027,conferred by,{subject} was conferred by {object}.
+P1411,nominated for,{subject} was nominated for {object}.
+P241,military branch,{subject} served in the {object}.
+P136,genre,The genre of {subject} is {object}.
+P184,doctoral advisor,{subject} is the doctoral advisor of {object}.
+P1891,signatory,The signatory of {subject} is {object}.
+P407,language of work or name,The language of work or the name for {subject} is {object}.
+P135,movement,The movement associated with {subject} is {object}.
+P1535,used by,{subject} is used by {object}.
+P1038,relative,{subject} is a relative of {object}.
+P2348,time period,The time period of {subject} is {object}.
+P885,origin of the watercourse,The origin of {subject} is {object}.
+P1299,depicted by,The depiction of {subject} is by {object}.
+P1346,winner,The winner of {subject} is {object}.
+P797,authority,The authority for {subject} is {object}.
+P3179,territory overlaps,The territory of {subject} overlaps with {object}.
+P3320,board member,One of the board members of {subject} is {object}.
+P669,located on street,The street on which {subject} is located is {object}.
+P1268,represents,{subject} represents {object}.
+P149,architectural style,The architectural style of {subject} is {object}.
+P1343,described by source,{subject} is described by {object}.
+P449,original broadcaster,The original broadcaster of {subject} is {object}.
+P170,creator,{subject} was created by {object}.
+P1431,executive producer,The executive producer of {subject} is {object}.
+P272,production company,The production company for {subject} is {object}.
+P86,composer,The composer of {subject} is {object}.
+P915,filming location,The filming location of {subject} is {object}.
+P57,director,The director of {subject} is {object}.
+P921,main subject,The main subject of {subject} is {object}.
+P161,cast member,"In {subject}, {object} is a cast member."
+P98,editor,The editor of {subject} is {object}.
+P3448,stepparent,{subject} is the stepparent of {object}.
+P512,academic degree,{subject} holds an academic degree of {object}.
+P50,author,{subject} was authored by {object}.
+P291,place of publication,The place of publication of {subject} is {object}.
+P676,lyricist,The lyrics of {subject} were written by {object}.
+P144,based on,{subject} is based on {object}.
+P735,given name,The given name of {subject} is {object}.
+P1435,heritage designation,The heritage designation of {subject} is {object}.
+P1050,medical condition,{subject} has the medical condition {object}.
+P553,website account on,{subject} has a website account on {object}.
+P500,exclave of,{subject} is an exclave of {object}.
+P123,publisher,The publisher of {subject} is {object}.
+P452,industry,The industry associated with {subject} is {object}.
+P2670,has part(s) of the class,{subject} has parts that are instances of the class {object}.
+P533,target,The target of {subject} is {object}.
+P2541,operating area,The operating area of {subject} is {object}.
+P58,screenwriter,The screenwriter of {subject} is {object}.
+P1408,licensed to broadcast to,{subject} is licensed to broadcast to {object}.
+P2925,domain of saint or deity,The domain of {subject} is {object}.
+P3438,vehicle normally used,The vehicle normally used by {subject} is {object}.
+P931,place served by transport hub,The transport hub {subject} serves {object}.
+P126,maintained by,{subject} is maintained by {object}.
+P1441,present in work,{subject} is present in the work {object}.
+P1074,fictional or mythical analog of,The fictional or mythical analog of {subject} is {object}.
+P176,manufacturer,The manufacturer of {subject} is {object}.
+P287,designed by,{subject} was designed by {object}.
+P88,commissioned by,{subject} was commissioned by {object}.
+P1455,list of works,The list of works for {subject} is {object}.
+P193,main building contractor,The main building contractor for {subject} is {object}.
+P185,doctoral student,{subject} is the doctoral student of {object}.
+P664,organizer,The organizer of {subject} is {object}.
+P674,characters,One of the characters in {subject} is {object}.
+P840,narrative location,The narrative location of {subject} is {object}.
+P66,ancestral home,The ancestral home of {subject} is {object}.
+P413,position played on team / speciality,The position or specialty of {subject} is {object}.
+P1399,convicted of,{subject} was convicted of {object}.
+P189,location of discovery,The location of discovery for {subject} is {object}.
+P180,depicts,{subject} depicts {object}.
+P1071,location of creation,The location of creation of {subject} is {object}.
+P2632,place of detention,{subject} was detained at {object}.
+P175,performer,The performer of {subject} is {object}.
+P941,inspired by,{subject} was inspired by {object}.
+P483,recorded at studio or venue,{subject} was recorded at the studio or venue {object}.
+P547,commemorates,{subject} commemorates {object}.
+P2974,habitat,The habitat of {subject} is {object}.
+P1427,start point,The start point of {subject} is {object}.
+P467,legislated by,{subject} was legislated by {object}.
+P3842,located in the present-day administrative territorial entity,The present-day administrative territorial entity in which {subject} is located is {object}.
+P3022,flag bearer,The flag bearer for {subject} is {object}.
+P21,sex or gender,The sex or gender of {subject} is {object}.
+P608,exhibition history,The exhibition history of {subject} is {object}.
+P859,sponsor,{subject} was sponsored by {object}.
+P1552,has characteristic,{subject} has the quality {object}.
+P1028,donated by,{subject} was donated by {object}.
+P825,dedicated to,{subject} is dedicated to {object}.
+P725,voice actor,The voice actor for {subject} is {object}.
+P1290,godparent,{subject} is the godparent of {object}.
+P65,site of astronomical discovery,The site of astronomical discovery for {subject} is {object}.
+P1283,filmography,The filmography of {subject} is {object}.
+P991,successful candidate,The successful candidate in {subject} is {object}.
+P726,candidate,"In {subject}, {object} was a candidate."
+P371,presenter,The presenter of {subject} is {object}.
+P2438,narrator,The narrator of {subject} is {object}.
+P366,has use,The use of {subject} is {object}.
+P559,terminus,The terminus of {subject} is {object}.
+P1875,represented by,The representative for {subject} is {object}.
+P1877,after a work by,{subject} is based on a work by {object}.
+P2554,production designer,The production designer for {subject} is {object}.
+P344,director of photography,The director of photography for {subject} is {object}.
+P1040,film editor,The film editor of {subject} is {object}.
+P1433,published in,{subject} was published in {object}.
+P1444,destination point,The destination point of {subject} is {object}.
+P598,commander of,{subject} was the commander of {object}.
+P177,crosses,{subject} crosses {object}.
+P3342,significant person,{subject} is a significant person related to {object}.
+P2650,interested in,{subject} is interested in {object}.
+P410,military or police rank,{subject} holds the military rank of {object}.
+P195,collection,{subject} is part of the collection {object}.
+P3403,coextensive with,{subject} is coextensive with {object}.
+P1416,affiliation,{subject} is affiliated with {object}.
+P734,family name,The family name of {subject} is {object}.
