@@ -1,16 +1,19 @@
 # A Graph Perspective to Probe Structural Patterns of Knowledge in Large Language Models
 
 ## Enviornment Setup
-To setup the environment, dependencies can be installed using conda or pip:
-
----
+To setup the environment, we need to install unsloth to use LLMs to query our data.
+```
+conda create --name unsloth_env \
+    python=3.11 \
+    pytorch-cuda=12.1 \
+    pytorch cudatoolkit xformers -c pytorch -c nvidia -c xformers \
+    -y
+conda activate unsloth_env
+pip install unsloth
+```
 ## Data Setup
 
-<li> Dataset files are available at:<br>
-
-
-
-<li> Please download them and save them within the directory data/raw/
+<li> Dataset files are available in the directory data/raw
 
 ---
 ## Process
@@ -22,9 +25,9 @@ python scripts/run_dataset.py --input-dir data/raw/sample_data --output-base dat
 
 ```
 ### Step 2: Query triplet prompts to LLM for True/False evaluation
-
+Open the src/my_project/query.py and in the input field enter the triplets csv file processed from step 1. Save it and then run:
 ```
-python scripts/run_query.py --input-dir data/processed/sample_data
+python src/my_project/run_query.py 
 ```
 ### Step 3: Compute entity knowledge scores
 ```
