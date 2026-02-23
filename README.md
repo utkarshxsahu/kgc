@@ -117,9 +117,9 @@ All parameters are in `src/my_project/config.py`. The most commonly changed ones
 | `MAX_TRIPLETS_PER_ENTITY_ANCHOR` | `40` | Per-entity cap in anchor set (prevents one hub entity consuming the whole anchor budget) |
 | `MIN_TRIPLETS_PER_PARTIAL_SLICE` | `5` | Minimum slice size in the ignorance-guided selection |
 | `FRACTION_TRIPLETS_FOR_PARTIAL` | `0.30` | Target fraction of an entity's degree for partial picks |
-| `MODEL_DIR` | `unsloth/Qwen2.5-7B-Instruct-bnb-4bit` | Model used for LLM querying (Part 1 / anchor queries) |
+| `MODEL_DIR` | `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit` | Model used for LLM querying (Part 1 / anchor queries) |
 | `FINETUNE_MODEL_DIR` | `unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit` | Model to fine-tune |
-| `FINETUNE_EPOCHS` | `3` | Training epochs |
+| `FINETUNE_EPOCHS` | `1` | Training epochs |
 | `FINETUNE_LR` | `2e-4` | LoRA learning rate |
 
 ---

@@ -28,7 +28,7 @@ MIN_TRIPLETS_PER_PARTIAL_SLICE    = 5
 FRACTION_TRIPLETS_FOR_PARTIAL     = 0.30   # target fraction of entity degree
 
 # ── Step 2: LLM querying ──────────────────────────────────────────────────────
-MODEL_DIR        = "unsloth/Qwen2.5-7B-Instruct-bnb-4bit"
+MODEL_DIR        = "unsloth/Meta-Llama-3.1-8B-Instruct-bnb-4bit"
 MAX_SEQ_LENGTH   = 2048
 LOAD_IN_4BIT     = True
 TEMPERATURE      = 0.0
